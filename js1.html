@@ -93,6 +93,93 @@
             padding: 5px;
             border-radius: 10px;
     }
+    #miobottone9 {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #0f2183;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    padding: 10px;
+    margin: 10px;
+    }
+
+    #miobottone9:hover {background-color: #3e8e41}
+
+    #miobottone9:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    }
+    #miobottone1 {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #0f2183;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    padding: 10px;
+    margin: 10px;
+    }
+
+    #miobottone1:hover {background-color: #3e8e41}
+
+    #miobottone1:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    }
+    #miobottone2 {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #0f2183;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    padding: 10px;
+    margin: 10px;
+    }
+
+    #miobottone2:hover {background-color: #3e8e41}
+
+    #miobottone2:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    }
+    #container1 {
+            width: 300px;
+            height: 50px;
+            border: 5px solid;
+            background-color: #f2f2f2;
+            margin: 10px;
+            padding: 5px;
+            border-radius: 10px;
+    }
+    #separatore {
+            background-color: #000000;
+            margin: 10px;
+            padding: 5px;
+            border-radius: 4px;
+    }
 
     </style>
 </head>
@@ -108,12 +195,29 @@
         </a>
     </div>
 
+    <h2>JS1</h2>
+
     <button id="miobottone" onclick="aprifinestra()" >gatto di schrödinger</button>
     <input type="text" name="input" id="i1">
-    
+
     <div id="container">
         <div>
             <p id="out1">risultato: </p>
+        </div>
+    </div>
+    <div id="separatore">
+    </div>
+    <h2>JS2</h2>
+    <button id="miobottone" onclick="aprifinestra9()" >gatto di schrödinger1</button>
+    <input type="text" name="input" id="i1">
+    <button id="miobottone1" onclick="aprifinestra1()" >gatto di schrödinger2</button>
+    <input type="text" name="input" id="i2">
+    <button id="miobottone1" onclick="aprifinestra2()" >gatto di schrödinger3</button>
+    <input type="text" name="input" id="i3">
+    
+    <div id="container1">
+        <div>
+            <p id="out4">risultato: </p>
         </div>
     </div>
 
@@ -131,6 +235,24 @@
             let i=document.getElementById("i1").value;
             alert("gatto di schrödinger! " + i);
             document.getElementById("out1").innerHTML = "risultato: " + i;
+}
+        function aprifinestra9()
+        {
+            let i=document.getElementById("i1").value;
+            alert("gatto di schrödinger! " + i);
+            document.getElementById("out4").innerHTML = "risultato: " + i;
+}
+        function aprifinestra1()
+        {
+            let i1=document.getElementById("i2").value;
+            alert("gatto di schrödinger1! " + i1);
+            document.getElementById("out4").innerHTML = "risultato: " + i1;
+}
+        function aprifinestra2()
+        {
+            let i2=document.getElementById("i3").value;
+            alert("gatto di schrödinger2! " + i2);
+            document.getElementById("out4").innerHTML = "risultato: " + i2;
 }
     </script>
 </body>
