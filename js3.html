@@ -1,0 +1,109 @@
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        #container {
+            height: 100px;
+            width: 700px;
+            border: solid 3px;
+            border-radius: 10px;
+            background-color: aquamarine;
+            padding: 4px;
+        }
+        #container1 {
+            height: 100px;
+            width: 700px;
+            border: solid 3px;
+            border-radius: 10px;
+            background-color: pink;
+            padding: 4px;
+        }
+        #container2 {
+            height: 100px;
+            width: 700px;
+            border: solid 3px;
+            border-radius: 10px;
+            background-color: indianred;
+            padding: 4px;
+        }
+        #container3 {
+            height: 100px;
+            width: 700px;
+            border: solid 3px;
+            border-radius: 10px;
+            background-color: lightblue;
+            padding: 4px;
+        }
+        #container4 {
+            height: 100px;
+            width: 700px;
+            border: solid 3px;
+            border-radius: 10px;
+            background-color: yellowgreen;
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+    <p id="testo">“Fino a oggi la maggior parte degli scienziati è stata troppo occupata nello sviluppo di nuove teorie che descrivono che cosa sia l'universo per porsi la domanda perché?”</p> 
+    <p><i>Stephen Hawking</i></p>
+    </div>
+    <button onclick="nascondiTesto()">Nascondi Testo</button> 
+
+    <div id="container1">
+        <p id="testo">“Se verrà dimostrato che la mia teoria della relatività è valida, la Germania dirà che sono tedesco e la Francia che sono cittadino del mondo. Se la mia teoria dovesse essere sbagliata, la Francia dirà che sono un tedesco e la Germania che sono un ebreo.”</p> 
+        <p><i>Albert Einstein</i></p>
+        </div>
+        <button onclick="nascondiTesto1()">Nascondi Testo</button> 
+
+    <div id="container2">
+        <p id="testo">“Lo scienziato nel suo laboratorio non è solo un tecnico, è anche un bambino davanti a fenomeni della Natura che lo affascinano come un racconto di fate.”</p> 
+        <p><i>Marie Curie</i></p>
+        </div>
+        <button onclick="nascondiTesto2()">Nascondi Testo</button> 
+    
+    <div id="container3">
+        <p id="testo">“Qualsiasi marmocchio può uccidere una pulce: tutti gli studiosi delle accademie del mondo non sono in grado di crearne una.”</p> 
+        <p><i>Albert Einstein</i></p>
+        </div>
+        <button onclick="nascondiTesto3()">Nascondi Testo</button> 
+    
+    <div id="container4">
+       <p id="testo">“Gli scienziati sognano di fare grandi cose. Gli ingegneri le realizzano.”</p> 
+       <p><i>James Michener</i></p>
+       </div>
+       <button onclick="nascondiTesto4()">Nascondi Testo</button> 
+
+
+    <script>
+    function nascondiTesto() 
+    {
+    const testo = document.getElementById("container");
+    testo.style.display = "none"; 
+    } 
+    function nascondiTesto1() 
+    {
+    const testo = document.getElementById("container1");
+    testo.style.display = "none"; 
+    }
+    function nascondiTesto2() 
+    {
+    const testo = document.getElementById("container2");
+    testo.style.display = "none"; 
+    } 
+    function nascondiTesto3() 
+    {
+    const testo = document.getElementById("container3");
+    testo.style.display = "none"; 
+    } 
+    function nascondiTesto4() 
+    {
+    const testo = document.getElementById("container4");
+    testo.style.display = "none"; 
+    } 
+
+</script>
+</body>
+</html>
