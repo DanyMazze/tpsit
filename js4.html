@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatore del Dislivello</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            margin: 10px 0 5px;
+        }
+
+        input {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #4CAF50;
+        }
+
+        .container {
+            position: relative;
+            width: 400px;
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .container .btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .container .btn:hover {
+            background-color: #45a049;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        #out1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 30px;
+            color: #4CAF50;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Calcolatore del Dislivello</h1>
+    <p>Ora calcoleremo insieme il dislivello del tuo bellissimo percorso.</p>
+
+    <label for="in1">Altitudine punto inizio (metri):</label>
+    <input id="in1" type="text" placeholder="Es. 1000">
+
+    <label for="in7">Altitudine punto di pausa (metri):</label>
+    <input id="in7" type="text" placeholder="Es. 1500">
+
+    <label for="in2">Altitudine punto finale (metri):</label>
+    <input id="in2" type="text" placeholder="Es. 2000">
+
+    <div class="container">
+        <img src="https://www.mountlive.com/wp-content/uploads/2015/06/monviso.jpg" alt="Vista di Montagna">
+        <button class="btn" onclick="calcola()">Calcola Dislivello</button>
+    </div>
+
+    <p id="out1">Dislivello: </p>
+
+    <script>
+        function calcola(){
+            let a = parseFloat(document.getElementById("in1").value);
+            let b = parseFloat(document.getElementById("in2").value);
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("out1").innerHTML = "Per favore inserisci valori validi.";
+            } else {
+                let ris = b - a;
+                document.getElementById("out1").innerHTML = "Dislivello: " + ris + " metri";
+            }
+        }
+    </script>
+</body>
+</html>
