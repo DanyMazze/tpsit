@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            border: solid 5px #000000;
+            border-radius: 15px;
+            background-color: #f0f8f7;
+            text-align: center;
+            padding: 30px;
+            width: auto;
+            box-sizing: border-box;
+            box-shadow: 5px 10px #888888;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <button onclick="getTime()">play</button>
+        <p id="out1">numeri: </p>
+        <p id="out2">-</p>
+        <p id="out3">-</p>
+        <p id="out4">-</p>
+        <p id="out5">-</p>
+        <p id="out6">-</p>
+        <p id="out7">-</p>
+        <p id="out8">-</p>
+        
+    </div>
+</body>
+<script>
+    function IsPrime(n){  
+            let isPrime=true;
+            for(let i=2;i<(n/2);i++){
+                if((n%i)==0){
+                    isPrime=false;
+                    }
+                }
+                return isPrime;
+            }
+    let n = 0;
+    function getTime() {
+        let numero_casuale= Math.floor(Math.random()*1000);
+        document.getElementById("out1").innerHTML ="numeri: " + numero_casuale;
+        if (numero_casuale%2==0) {
+            document.getElementById("out2").innerHTML = "è pari";
+        }else
+        {
+            document.getElementById("out2").innerHTML = "è dispari";
+        }
+        if (IsPrime(numero_casuale)==true){
+            document.getElementById("out3").innerHTML = " è un numero primo";
+        }else{
+            document.getElementById("out3").innerHTML = " non è un numero primo";
+        }
+        let metà=numero_casuale / 2;
+        document.getElementById("out4").innerHTML = " la metà è: " + Math.round(metà);
+        let doppio= numero_casuale*2
+        document.getElementById("out5").innerHTML = " e il doppio è: " + doppio;
+        let complemento= 1000-numero_casuale
+        document.getElementById("out6").innerHTML = " e il complemento è: " + complemento;
+        let precedente= numero_casuale-1
+        let succssivo= numero_casuale+1
+        let somma= precedente+succssivo
+        document.getElementById("out7").innerHTML = "la somma tra il numero precedente e il successivo è" + somma;
+        let moltiplica= numero_casuale*3.14
+        document.getElementById("out8").innerHTML = "e il numero moltiplicato per pigreco è: " + moltiplica;
+    }
+    setInterval(getTime, 5000);
+
+</script>
+</html>
