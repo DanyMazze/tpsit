@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Il mio bel sito</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f6f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        h1 {
+            color: #34495e;
+            font-size: 2.5rem;
+            margin-top: 50px;
+            font-weight: 600;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-group {
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        label {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"] {
+            padding: 12px 20px;
+            font-size: 16px;
+            width: 100%;
+            border: 2px solid #2980b9;
+            border-radius: 25px;
+            outline: none;
+            margin-top: 10px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus {
+            border-color: #3498db;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #2980b9;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 5px #999;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #3498db;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .button:active {
+            background-color: #1d5784;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transform: translateY(2px);
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            color: #34495e;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">D&M</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link " aria-current="page" href="https://danymazze.github.io/tpsit/">home</a>
+                <a class="nav-link " href="https://danymazze.github.io/tpsit/flip_card.html">chi sono?</a>
+                <a class="nav-link " href="https://danymazze.github.io/tpsit/html.html">html e CSS</a>
+                <a class="nav-link " href="https://danymazze.github.io/tpsit/js.html">JS</a>
+                <a class="nav-link " href="#">Bootstrap</a>
+                <a class="nav-link active" href="#">quadrati</a>
+            </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-5 text-center" style="max-width: 880px;">
+        <h1 class="text-center">quadrati</h1>
+        <p class="lead" class="text-center">
+            questo è il mio esercizio:</p>
+    </div>
+    <h1>Calcola la Media dei Voti</h1>
+
+    <div class="container">
+        <div class="input-group">
+            <label for="name">Inserisci il tuo nome:</label>
+            <input type="text" id="name" placeholder="Nome completo">
+        </div>
+
+        <div class="input-group">
+            <label for="voto1">Inserisci il primo voto:</label>
+            <input type="number" id="voto1" placeholder="Voto 1" min="0" max="10">
+        </div>
+
+        <div class="input-group">
+            <label for="voto2">Inserisci il secondo voto:</label>
+            <input type="number" id="voto2" placeholder="Voto 2" min="0" max="10">
+        </div>
+
+        <div class="input-group">
+            <label for="voto3">Inserisci il terzo voto:</label>
+            <input type="number" id="voto3" placeholder="Voto 3" min="0" max="10">
+        </div>
+
+        <div class="input-group">
+            <label for="voto4">Inserisci il quarto voto:</label>
+            <input type="number" id="voto4" placeholder="Voto 4" min="0" max="10">
+        </div>
+
+        <div class="input-group">
+            <label for="voto5">Inserisci il quinto voto:</label>
+            <input type="number" id="voto5" placeholder="Voto 5" min="0" max="10">
+        </div>
+
+        <button class="button" onclick="calcolaMediaVoti()">Calcola la Media</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calcolaMediaVoti() {
+            const name = document.getElementById('name').value;
+            const voto1 = parseFloat(document.getElementById('voto1').value);
+            const voto2 = parseFloat(document.getElementById('voto2').value);
+            const voto3 = parseFloat(document.getElementById('voto3').value);
+            const voto4 = parseFloat(document.getElementById('voto4').value);
+            const voto5 = parseFloat(document.getElementById('voto5').value);
+
+            if (isNaN(voto1) || isNaN(voto2) || isNaN(voto3) || isNaN(voto4) || isNaN(voto5)) {
+                document.getElementById('result').innerText = "Per favore, inserisci tutti i voti correttamente.";
+                return;
+            }
+
+            const media = (voto1 + voto2 + voto3 + voto4 + voto5) / 5;
+
+            document.getElementById('result').innerText = `Ciao ${name}, la tua media è: ${media.toFixed(2)}`;
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
