@@ -10,12 +10,11 @@
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             color: #333;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
         }
 
         h1 {
@@ -90,6 +89,13 @@
             margin-top: 30px;
             color: #4CAF50;
         }
+
+        .navbar {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border-radius: 0;
+        }
     </style>
 </head>
 <body>
@@ -97,25 +103,24 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">D&M</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link " aria-current="page" href="https://danymazze.github.io/tpsit/">home</a>
-                <a class="nav-link " href="https://danymazze.github.io/tpsit/flip_card.html">chi sono?</a>
-                <a class="nav-link " href="https://danymazze.github.io/tpsit/html.html">html e CSS</a>
-                <a class="nav-link " href="https://danymazze.github.io/tpsit/js.html">JS</a>
-                <a class="nav-link " href="https://danymazze.github.io/tpsit/boot.html">Bootstrap</a>
-                <a class="nav-link active" href="#">quadrati</a>
-            </div>
+                <div class="navbar-nav">
+                    <a class="nav-link" href="https://danymazze.github.io/tpsit/">Home</a>
+                    <a class="nav-link" href="https://danymazze.github.io/tpsit/flip_card.html">Chi sono?</a>
+                    <a class="nav-link" href="https://danymazze.github.io/tpsit/html.html">HTML e CSS</a>
+                    <a class="nav-link" href="https://danymazze.github.io/tpsit/js.html">JS</a>
+                    <a class="nav-link" href="https://danymazze.github.io/tpsit/boot.html">Bootstrap</a>
+                    <a class="nav-link active" href="#">Dislivello</a>
+                </div>
             </div>
         </div>
     </nav>
     <div class="container my-5 text-center" style="max-width: 880px;">
-        <h1 class="text-center">quadrati</h1>
-        <p class="lead" class="text-center">
-            questo è il mio esercizio:</p>
-    </div>
+        <h1 class="text-center">Dislivello</h1>
+        <p class="lead">Questo è il mio esercizio:</p>
+    
     <h1>Calcolatore del Dislivello</h1>
     <p>Ora calcoleremo insieme il dislivello del tuo bellissimo percorso.</p>
 
@@ -128,15 +133,17 @@
     <label for="in2">Altitudine punto finale (metri):</label>
     <input id="in2" type="text" placeholder="Es. 2000">
 
+    <p id="out1">Dislivello: </p>
+    </div>
     <div class="container">
         <img src="https://www.mountlive.com/wp-content/uploads/2015/06/monviso.jpg" alt="Vista di Montagna">
         <button class="btn" onclick="calcola()">Calcola Dislivello</button>
     </div>
 
-    <p id="out1">Dislivello: </p>
+    
 
     <script>
-        function calcola(){
+        function calcola() {
             let a = parseFloat(document.getElementById("in1").value);
             let b = parseFloat(document.getElementById("in2").value);
             if (isNaN(a) || isNaN(b)) {
@@ -147,7 +154,8 @@
             }
         }
     </script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
