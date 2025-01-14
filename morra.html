@@ -11,11 +11,18 @@
             padding: 0;
             font-family: 'Arial', sans-serif;
             background: linear-gradient(to bottom, #80e0a7, #fff);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             color: #333;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        #main-content {
+            margin-top: 80px; /* Spazio per la navbar fissa */
         }
 
         #container {
@@ -26,6 +33,7 @@
             padding: 30px;
             width: 100%;
             max-width: 400px;
+            margin: 0 auto;
             box-sizing: border-box;
             box-shadow: 5px 10px #888888;
         }
@@ -37,13 +45,6 @@
             font-weight: bold;
         }
 
-        label {
-            cursor: default;
-            border-radius: 10px;
-            display: block;
-            margin-bottom: 10px;
-        }
-
         input[type="text"] {
             width: 100%;
             padding: 12px;
@@ -53,7 +54,6 @@
             border-radius: 8px;
             background-color: #e7f4f1;
             color: #333;
-            box-sizing: border-box;
         }
 
         button {
@@ -77,159 +77,81 @@
             margin: 15px 0;
             color: #333;
         }
-        @media (max-width: 768px) {
-            #container {
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            input[type="text"] {
-                font-size: 1em;
-                padding: 10px;
-            }
-
-            button {
-                font-size: 1.1em;
-                padding: 10px 20px;
-            }
-
-            p {
-                font-size: 1em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            #container {
-                padding: 15px;
-            }
-
-            h1 {
-                font-size: 1.5em;
-            }
-
-            input[type="text"] {
-                font-size: 0.9em;
-                padding: 8px;
-            }
-
-            button {
-                font-size: 1em;
-                padding: 8px 16px;
-            }
-
-            p {
-                font-size: 0.9em;
-            }
-        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">D&M</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link " aria-current="page" href="https://danymazze.github.io/tpsit/">home</a>
-                <a class="nav-link " href="https://danymazze.github.io/tpsit/flip_card.html">chi sono?</a>
-                <a class="nav-link " href="https://danymazze.github.io/tpsit/html.html">html e CSS</a>
-                <a class="nav-link " href="https://danymazze.github.io/tpsit/js.html">JS</a>
-                <a class="nav-link " href="https://danymazze.github.io/tpsit/boot.html">Bootstrap</a>
-                <a class="nav-link active" href="#">morra bot</a>
-            </div>
+                <div class="navbar-nav">
+                    <a class="nav-link" href="https://danymazze.github.io/tpsit/">Home</a>
+                    <a class="nav-link" href="https://danymazze.github.io/tpsit/flip_card.html">Chi sono?</a>
+                    <a class="nav-link" href="https://danymazze.github.io/tpsit/html.html">HTML e CSS</a>
+                    <a class="nav-link" href="https://danymazze.github.io/tpsit/js.html">JS</a>
+                    <a class="nav-link" href="https://danymazze.github.io/tpsit/boot.html">Bootstrap</a>
+                    <a class="nav-link active" href="#">Morra Bot</a>
+                </div>
             </div>
         </div>
     </nav>
-    <div class="container my-5 text-center" style="max-width: 880px;">
-        <h1 class="text-center">morra bot</h1>
-        <p class="lead" class="text-center">
-            questo è il mio esercizio:</p>
-    </div>
-    <div id="container">
-        <h1>Morra</h1>
-        <label>
-            <input id="morra" type="text" placeholder="sasso/carta/forbice">
-        </label>
-        <br> 
-        <button onclick="numero_tiri()">Inizia</button>
-        <p id="out1">-</p>
-        <p id="out2">-</p>
-        <p id="out3">-</p>
-        <p id="risultato"></p>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <div class="container my-5 text-center" style="max-width: 880px;">
+            <h1 class="text-center">Morra Bot</h1>
+            <p class="lead text-center">Questo è il mio esercizio:</p>
+        </div>
+        <div id="container">
+            <h1>Morra</h1>
+            <label>
+                <input id="morra" type="text" placeholder="sasso/carta/forbice">
+            </label>
+            <br> 
+            <button onclick="numero_tiri()">Inizia</button>
+            <p id="out1">-</p>
+            <p id="out2">-</p>
+            <p id="out3">-</p>
+        </div>
     </div>
 
+    <!-- Script -->
     <script>
-        let numeroCasuale = 0;
         let morraArray = ["sasso", "carta", "forbice"];
 
         function numero_tiri() {
-            document.getElementById("out3").innerHTML = "";
-            let morra = document.getElementById("morra").value;
-            console.log(morra);
-            numeroCasuale = Math.floor(Math.random() * 3);
-            if (morra == "sasso") {
-                morra == morraArray[0];
-                console.log(morra);
-                document.getElementById("out1").innerHTML = "tu hai tirato " + morraArray[0];
-            }
-            else if (morra == "carta") {
-                morra == morraArray[1];
-                document.getElementById("out1").innerHTML = "tu hai tirato " + morraArray[1];
-            }
-            else if (morra == "forbice") {
-                morra == morraArray[2];
-                document.getElementById("out1").innerHTML = "tu hai tirato " + morraArray[2];
-            }
-            else {
-                alert("non valido, riprova.");
+            let userInput = document.getElementById("morra").value.toLowerCase();
+            let computerChoice = morraArray[Math.floor(Math.random() * 3)];
+            
+            if (!morraArray.includes(userInput)) {
+                alert("Input non valido! Inserisci 'sasso', 'carta' o 'forbice'.");
                 return;
             }
-            document.getElementById("out2").innerHTML = "il computer ha tirato " + morraArray[numeroCasuale];
 
-            if (morraArray[numeroCasuale] == "sasso") {
+            document.getElementById("out1").innerHTML = `Tu hai tirato: ${userInput}`;
+            document.getElementById("out2").innerHTML = `Il computer ha tirato: ${computerChoice}`;
 
-                if (morra == "carta") {
-                    document.getElementById("out3").innerHTML = "hai vinto tu";
-                }
-                else if (morra == "forbice") {
-                    document.getElementById("out3").innerHTML = "ha vinto il computer";
-                }
-                else if (morra == "sasso") {
-                    document.getElementById("out3").innerHTML = "pareggio";
-                }
+            let risultato = "";
+            if (userInput === computerChoice) {
+                risultato = "Pareggio!";
+            } else if (
+                (userInput === "sasso" && computerChoice === "forbice") ||
+                (userInput === "carta" && computerChoice === "sasso") ||
+                (userInput === "forbice" && computerChoice === "carta")
+            ) {
+                risultato = "Hai vinto!";
+            } else {
+                risultato = "Ha vinto il computer!";
             }
-            else if (morraArray[numeroCasuale] == "carta") {
 
-                if (morra == "carta") {
-                    document.getElementById("out3").innerHTML = "pareggio";
-                }
-                else if (morra == "forbice") {
-                    document.getElementById("out3").innerHTML = "hai vinto tu";
-                }
-                else if (morra == "sasso") {
-                    document.getElementById("out3").innerHTML = "ha vinto il computer";
-                }
-            }
-            else if (morraArray[numeroCasuale] == "forbice") {
-
-                if (morra == "carta") {
-                    document.getElementById("out3").innerHTML = "ha vinto il computer";
-                }
-                else if (morra == "forbice") {
-                    document.getElementById("out3").innerHTML = "pareggio";
-                }
-                else if (morra == "sasso") {
-                    document.getElementById("out3").innerHTML = "hai vinto";
-                }
-            }
+            document.getElementById("out3").innerHTML = risultato;
         }
     </script>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
