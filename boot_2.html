@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sicurezza</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background: linear-gradient(45deg, #343a40, #8408b5);
+            border-bottom: 2px solid #8a1999;
+        }
+        .navbar-brand {
+            color: #be2bcb;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link {
+            color: #ffffff ;
+            font-size: 1.1rem;
+        }
+        .nav-link:hover {
+            color: #be2bcb ;
+        }
+        h2 {
+            color: #212529;
+            margin-bottom: 1rem;
+        }
+        section {
+            padding: 3rem 1rem;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card {
+            background: linear-gradient(135deg, #e9ecef, #ffffff);
+            border: 1px solid #adb5bd;
+        }
+        .blockquote-footer {
+            color: #6c757d ;
+        }
+        hr {
+            border: 1px solid #be2bcb;
+        }
+        .carousel-caption h5 {
+            background-color: rgba(0, 0, 0, 0.6);
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 5px;
+            color: #be2bcb;
+        }
+        .carousel-caption p {
+            background-color: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="Progetto senza titolo (2).jpg" alt="Bootstrap" width="30" height="24">
+                AvTech
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  mb-2 ">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#chi-siamo">Chi siamo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ai-aiuto">AI che ci aiuta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#collaborazione">Collaborazione con l'AI</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleCaptions" class="carousel slide mt-5">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Progetto senza titolo (1).jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>AvTech</h5>
+                    <p>Qui parleremo del nostro più grande collaboratore: l'intelligenza artificiale.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Non ci Sostituisce.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Esatto,</h5>
+                    <p>L'intelligenza Artificiale ci aiuta nel mondo di tutti i giorni.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Non ci Sostituisce (1).jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Esatto,</h5>
+                    <p>L'intelligenza Artificiale ci aiuta nel mondo di tutti i giorni.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container my-5">
+        <section id="home">
+            <h2>Home</h2>
+            <p>Benvenuti su AvTech, dove la tecnologia e l'innovazione si incontrano.</p>
+        </section>
+        <hr>
+        <section id="chi-siamo">
+            <h2>2. Introduzione all'IA</h2>
+            <p>L'intelligenza artificiale è una disciplina dell'informatica che mira a creare macchine in grado di replicare funzioni umane come pensare e apprendere.</p>
+            
+            <h3>Tecnologie principali</h3>
+            <ul>
+                <li><strong>Machine Learning (ML)</strong>: Sistemi che apprendono dai dati per migliorare nel tempo.</li>
+                <li><strong>Deep Learning</strong>: Modelli ispirati al cervello umano che elaborano grandi quantità di informazioni.</li>
+                <li><strong>Elaborazione del linguaggio naturale (NLP)</strong>: Permette alle macchine di comprendere e rispondere al linguaggio umano.</li>
+            </ul>
+            
+            <p>L'IA si sta evolvendo da sistemi specifici a piattaforme generalizzate, capaci di comprendere contesti complessi.</p>
+        </section>
+        <hr>
+        <section id="ai-aiuto">
+            <h2>1. L'IA che ci aiuta</h2>
+                <p>L'intelligenza artificiale offre soluzioni pratiche per migliorare le nostre vite in diversi settori.</p>
+                
+                <h3>Salute</h3>
+                <ul>
+                    <li><strong>Diagnostica medica</strong>: Algoritmi analizzano immagini mediche per individuare malattie con alta precisione.</li>
+                    <li><strong>Assistenti virtuali</strong>: Chatbot medici e robot supportano pazienti e personale sanitario.</li>
+                </ul>
+                
+                <h3>Educazione</h3>
+                <ul>
+                    <li><strong>Apprendimento personalizzato</strong>: Tutor virtuali creano piani di studio su misura.</li>
+                    <li><strong>Accessibilità</strong>: Traduzione in tempo reale e supporto per studenti con disabilità.</li>
+                </ul>
+                
+                <h3>Ambiente</h3>
+                <ul>
+                    <li><strong>Monitoraggio ambientale</strong>: Sistemi intelligenti rilevano inquinamento e disastri.</li>
+                    <li><strong>Agricoltura di precisione</strong>: Ottimizzazione dell'uso di risorse per aumentare i raccolti.</li>
+                </ul>
+        </section>
+        <hr>
+        <section id="collaborazione">
+            <h2>3. Come ci eleva l'IA</h2>
+            <p>L'IA non solo migliora la nostra quotidianità, ma potenzia l'umanità e apre nuove opportunità.</p>
+            
+            <h3>Espansione delle capacità umane</h3>
+            <ul>
+                <li><strong>Accesso alla conoscenza</strong>: Strumenti come motori di ricerca avanzati e assistenti vocali democratizzano le informazioni.</li>
+                <li><strong>Potenziare la creatività</strong>: Strumenti di design e generatori di contenuti collaborano con artisti e professionisti.</li>
+            </ul>
+            
+            <h3>Risolvere problemi globali</h3>
+            <ul>
+                <li><strong>Cambiamenti climatici</strong>: Modelli predittivi per strategie contro il riscaldamento globale.</li>
+                <li><strong>Scoperte scientifiche</strong>: Accelerazione della ricerca in fisica, chimica e altri campi.</li>
+            </ul>
+            
+            <h3>Colmare il divario umano-macchina</h3>
+            <p>Con tecnologie come le interfacce cervello-macchina, l'IA promette di migliorare l'interazione e le capacità cognitive umane.</p>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
