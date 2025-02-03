@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Esempio Bootstrap</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+    
+    <body>
+
+
+    <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
+                <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5"/>
+            </svg>
+            - perchè credere in qualcosa?
+        </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+        <h3>perchè credere in qualcosa?</h3>
+        Crediamo in qualcosa perché la nostra mente è progettata per dare senso al mondo che ci circonda. La credenza è un meccanismo psicologico ed evolutivo che ci aiuta a navigare nella realtà, a prendere decisioni e a creare legami sociali.
+
+        </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z"/>
+                <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z"/>
+                <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/>
+              </svg>
+            - quando siamo veramente maturi?
+        </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+        <h3>quando siamo veramente maturi?</h3>
+        La maturità non è un traguardo fisso, ma un processo continuo che varia da persona a persona. Non esiste un'età precisa in cui si diventa "veramente maturi", perché la maturità dipende da diversi fattori: emotivi, cognitivi, esperienziali e sociali.
+        </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat" viewBox="0 0 16 16">
+                <path d="M2.678 11.894a1 1 0 0 1 .287.801 11 11 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8 8 0 0 0 8 14c3.996 0 7-2.807 7-6s-3.004-6-7-6-7 2.808-7 6c0 1.468.617 2.83 1.678 3.894m-.493 3.905a22 22 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a10 10 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105"/>
+              </svg>
+            - La conoscenza di tutto è un vero male?
+        </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+        <h3>La conoscenza di tutto è un vero male?</h3>
+        La conoscenza di tutto potrebbe essere sia una benedizione che una condanna. Da un lato, eliminerebbe l’ignoranza, permettendoci di risolvere ogni problema, evitare errori e vivere in armonia con l’universo. Potremmo raggiungere il massimo progresso scientifico, eliminare sofferenza e ingiustizie e forse trovare pace interiore, conoscendo il senso ultimo della vita. Dall’altro lato, però, potrebbe essere un peso insopportabile: senza mistero o scoperta, la vita perderebbe di significato, e la consapevolezza di ogni dolore, tragedia e destino ineluttabile potrebbe renderci insensibili o profondamente angosciati. Inoltre, se tutto fosse già noto, il libero arbitrio diventerebbe un’illusione e la nostra capacità di scegliere perderebbe valore. Infine, un sapere così immenso potrebbe isolarci dagli altri, creando una solitudine assoluta. In definitiva, la conoscenza totale non è necessariamente un "vero male", ma potrebbe privarci di ciò che rende l’esistenza umana così profondamente autentica e significativa.
+        </div>
+        </div>
+    </div>
+    </div>
+
+<hr>
+
+<div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-diagram-2" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H11a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 5 7h2.5V6A1.5 1.5 0 0 1 6 4.5zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5zM3 11.5A1.5 1.5 0 0 1 4.5 10h1A1.5 1.5 0 0 1 7 11.5v1A1.5 1.5 0 0 1 5.5 14h-1A1.5 1.5 0 0 1 3 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1A1.5 1.5 0 0 1 9 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
+              </svg>
+            - l'intelligenza artificiale diventerà troppo grande per l'essere umano?
+        </button>
+    </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+            <h3>l'intelligenza artificiale diventerà troppo grande per l'essere umano?</h3>
+            L’intelligenza artificiale potrebbe diventare "troppo grande" per l’essere umano se dovesse superarlo in ogni ambito senza un adeguato controllo. Se gestita con saggezza, potrebbe essere uno strumento straordinario per risolvere problemi globali e migliorare la nostra vita, potenziando l’intelligenza umana e automatizzando compiti complessi. Tuttavia, se dovesse sfuggire al controllo o sviluppare obiettivi incompatibili con quelli umani, potrebbe rappresentare una minaccia, portando alla perdita di autonomia, alla dipendenza totale dalla tecnologia o persino alla nostra estinzione. La chiave sarà mantenere un equilibrio, garantendo che l’IA sia sviluppata con principi etici e sotto la supervisione umana, in modo che diventi un alleato anziché un pericolo.
+            </div>
+        </div>
+    </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-incognito" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="m4.736 1.968-.892 3.269-.014.058C2.113 5.568 1 6.006 1 6.5 1 7.328 4.134 8 8 8s7-.672 7-1.5c0-.494-1.113-.932-2.83-1.205l-.014-.058-.892-3.27c-.146-.533-.698-.849-1.239-.734C9.411 1.363 8.62 1.5 8 1.5s-1.411-.136-2.025-.267c-.541-.115-1.093.2-1.239.735m.015 3.867a.25.25 0 0 1 .274-.224c.9.092 1.91.143 2.975.143a30 30 0 0 0 2.975-.143.25.25 0 0 1 .05.498c-.918.093-1.944.145-3.025.145s-2.107-.052-3.025-.145a.25.25 0 0 1-.224-.274M3.5 10h2a.5.5 0 0 1 .5.5v1a1.5 1.5 0 0 1-3 0v-1a.5.5 0 0 1 .5-.5m-1.5.5q.001-.264.085-.5H2a.5.5 0 0 1 0-1h3.5a1.5 1.5 0 0 1 1.488 1.312 3.5 3.5 0 0 1 2.024 0A1.5 1.5 0 0 1 10.5 9H14a.5.5 0 0 1 0 1h-.085q.084.236.085.5v1a2.5 2.5 0 0 1-5 0v-.14l-.21-.07a2.5 2.5 0 0 0-1.58 0l-.21.07v.14a2.5 2.5 0 0 1-5 0zm8.5-.5h2a.5.5 0 0 1 .5.5v1a1.5 1.5 0 0 1-3 0v-1a.5.5 0 0 1 .5-.5"/>
+                  </svg>
+                - vivere e sopravvirere sono concetti diversi?
+            </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+        <div class="accordion-body">
+            <h3>vivere e sopravvirere sono concetti diversi?</h3>
+            Sì, vivere e sopravvivere sono concetti diversi, anche se spesso vengono confusi.
+
+Sopravvivere significa esistere in uno stato minimo, mantenendo le funzioni vitali ma senza necessariamente trovare piacere, significato o realizzazione nella vita. È ciò che accade quando una persona si limita a soddisfare i bisogni primari, come mangiare, dormire e lavorare, senza vera passione o scopo.
+
+Vivere, invece, significa fare esperienza della vita in modo pieno, provare emozioni, inseguire sogni, creare legami e dare un senso alla propria esistenza. Vivere non è solo resistere alle difficoltà, ma trovare gioia, crescita e consapevolezza nel percorso.
+
+In sintesi, sopravvivere è esistere, vivere è sentire.
+        </div>
+    </div>
+</div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 11.887a.5.5 0 0 0 .07-.704l-4.5-5.5a.5.5 0 0 0-.74-.037L7.06 8.233 3.404 3.206a.5.5 0 0 0-.808.588l4 5.5a.5.5 0 0 0 .758.06l2.609-2.61 4.15 5.073a.5.5 0 0 0 .704.07"/>
+              </svg>
+            - l'evoluzione è un inevitabile?
+        </button>
+    </h2>
+        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <h3>l'evoluzione è un inevitabile?</h3>
+                L'evoluzione, intesa come cambiamento e adattamento nel tempo, è inevitabile in molti contesti, ma non è necessariamente lineare o infinita.
+
+Dal punto di vista biologico, l'evoluzione è un processo naturale guidato dalla selezione naturale, dalle mutazioni genetiche e dall'adattamento all'ambiente. Finché esistono pressioni selettive, le specie continueranno a evolversi, ma questo non significa che l’evoluzione abbia una direzione prestabilita o che porti sempre a un miglioramento.
+
+Dal punto di vista tecnologico e sociale, l'evoluzione sembra inevitabile perché l'essere umano ha una spinta naturale al progresso e all'innovazione. Tuttavia, civiltà e tecnologie possono anche regredire o estinguersi a causa di guerre, crisi ambientali o altri fattori.
+
+Infine, a livello filosofico, l'evoluzione potrebbe non essere inevitabile se consideriamo scenari in cui l'umanità smette di cambiare o si auto-distrugge.
+
+In sintesi, l'evoluzione è un fenomeno naturale e potente, ma non è garantito che continui per sempre o che porti sempre a qualcosa di "migliore".
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
