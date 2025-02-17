@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3x3 Grid of Squares</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .container {
+            display: flex;
+            align-items: center; 
+            height: 50vh;
+        }
+        .col-4 {
+            color:black;
+            cursor: pointer;
+            padding: 50px;
+            text-align: center;
+            font-size: 20px;
+            transition: opacity 0.3s ease;
+            background-color: antiquewhite;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+        .col-4:hover {
+            color: white;
+            opacity: 0.8;
+            background-color: rgb(65, 68, 173);
+        }
+    </style>
+</head>
+<body>
+    <p id="out" > scrivi il numero che vuoi dividere e clicca il numero per cui vuoi dividerlo</p>
+    <input id="int1" ></input>
+    <div class="container">
+        <div class="row">
+            <div id="pulsante" class="col-4"onclick="stampaciao()">1</div>
+            <div id="pulsante" class="col-4"  onclick="stampaciao1()">2</div>
+            <div id="pulsante" class="col-4"onclick="stampaciao2()">3</div>
+            <div id="pulsante" class="col-4" onclick="stampaciao3()">4</div>
+            <div id="pulsante" class="col-4"  onclick="stampaciao4()">5</div>
+            <div id="pulsante" class="col-4"  onclick="stampaciao5()">6</div>
+            <div id="pulsante" class="col-4"  onclick="stampaciao6()">7</div>
+            <div id="pulsante" class="col-4" onclick="stampaciao7()">8</div>
+            <div id="pulsante" class="col-4"  onclick="stampaciao8()">9</div>
+        </div>
+    </div>
+    
+    <p id="out1" >-</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JieShIMd0eUFws/j6cRVyjSMfHj35U5j7Sk79MS+0i" crossorigin="anonymous"></script>
+
+    <script>
+        function stampaciao() {
+            let input = document.getElementById("int1").value;
+            document.getElementById("out1").innerHTML = "Il risultato è: " + input;
+            }
+            function stampaciao1() {
+            let input = document.getElementById("int1").value;
+            let diviso = input/2;
+            document.getElementById("out1").innerHTML = "Il risultato è: " + diviso.toFixed(2);
+            }
+            function stampaciao2() {
+            let input = document.getElementById("int1").value;
+            let diviso = input/3;
+            document.getElementById("out1").innerHTML = "Il risultato è: " + diviso.toFixed(2);
+            }
+            function stampaciao3() {
+            let input = document.getElementById("int1").value;
+            let diviso = input/4;
+            document.getElementById("out1").innerHTML = "Il risultato è: " + diviso.toFixed(2);
+            }
+            function stampaciao4() {
+            let input = document.getElementById("int1").value;
+            let diviso = input/5;
+            document.getElementById("out1").innerHTML = "Il risultato è: " + diviso.toFixed(2);
+            }
+            function stampaciao5() {
+            let input = document.getElementById("int1").value;
+            let diviso = input/6;
+            document.getElementById("out1").innerHTML = "Il risultato è: " + diviso.toFixed(2);
+            }
+            function stampaciao6() {
+            let input = document.getElementById("int1").value;
+            let diviso = input/7;
+            document.getElementById("out1").innerHTML = "Il risultato è: " + diviso.toFixed(2);
+            }
+            function stampaciao7() {
+            let input = document.getElementById("int1").value;
+            let diviso = input/8;
+            document.getElementById("out1").innerHTML = "Il risultato è: " + diviso.toFixed(2);
+            }
+            function stampaciao8() {
+            let input = document.getElementById("int1").value;
+            let diviso = input/9;
+            document.getElementById("out1").innerHTML = "Il risultato è: " + diviso.toFixed(2);
+            }
+    </script>
+
+</body>
+</html>
