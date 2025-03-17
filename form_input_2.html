@@ -1,17 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ricezione Dati</title>
 </head>
 <body>
-        <form action="f.html" method="get">
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname">
-            <button type="submit"></button>
-    </form>
+    <h2>Dati ricevuti:</h2>
+    <p id="output"></p>
+    <p id="output2"></p>
+    <p id="output3"></p>
+    <p id="output4"></p>
+    <p id="output5"></p>
+
+    <script>
+        function contrario(stringa) {
+            let parola = "";
+            for (let i = stringa.length - 1; i >= 0; i--) { 
+                let lettera = stringa[i]; 
+                parola += lettera; 
+            }
+            return parola; 
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const fname = params.get("fname") || "Nome non fornito";
+            const lname = params.get("lname") || "cognome non fornita";
+            document.getElementById("output").textContent = `Nome: ${fname}\ncognome: ${lname}`;
+            let lunghezza1 = fname.lenght;
+            let lunghezza2 = lname.lenght;
+            document.getElementById("output2").textContent = `il tuo nome è lungo: ${lunghezza1}, \nil tuo cognome è lungo: ${lunghezza2}`;
+            let invertito= contrario(fname)
+            document.getElementById("output3").textContent = `il tuo nome al contrario si scrive così: ${invertito}.`;
+            let insieme= fname+lname
+            document.getElementById("output5").textContent = `tutto assieme ${insieme}.`;
+            let lunghezze =lunghezza1+lunghezza2
+            if (lunghezza2>20){
+                document.getElementById("output4").textContent = `cognome lungo.`;
+            }
+        });
+
+        
+
+    </script>
 </body>
 </html>
